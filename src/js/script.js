@@ -1,8 +1,5 @@
 $(document).ready(function () {
-    console.log('document ready');
     if ($(window).width() <= 1280 && $(window).width() >= 768) {
-        console.log('1280 768');
-
         if ($('.rate-item').length) {
             for (i = 0; i < $('.rate-item').length; i++) {
                 let rateItem = $('.rate-item')[i];
