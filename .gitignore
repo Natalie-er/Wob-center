@@ -1,0 +1,4 @@
+**/node_modules/
+**/.git/
+/**/*.psd
+/**/package-lock.json

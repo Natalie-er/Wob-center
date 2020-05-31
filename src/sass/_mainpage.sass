@@ -1,0 +1,462 @@
+.calc 
+    @include flex()
+    margin-top: 30px
+    &__content 
+    &__text 
+        max-width: 440px
+        margin-bottom: 40px
+        color: $gray
+        font-size: 12px
+    &__image 
+        flex-shrink: 0
+    .btn 
+        &:first-child
+            margin-right: 20px
+    h1,
+    .h1 
+        margin: 30px 0 15px 0
+
+.about 
+    margin-bottom: 160px
+    &__content
+        @include flex($ai: initial)
+    &-item 
+        @include flex($fd: column, $jc: center)
+        flex-basis: 20%
+        margin-right: 20px
+        padding: 15px
+        background: $purple
+        border-radius: $borderRadius
+        color: $white
+        transition: 0.3s
+        &:last-child
+            margin-right: 0
+        &__image
+            margin-bottom: 10px
+        &__text
+            text-align: center
+        &:hover 
+            transform: translateY(-20px)
+
+.rate 
+    margin-bottom: 75px
+    &__content
+        display: flex
+    &-item
+        display: flex
+        flex-direction: column
+        flex-basis: 33%
+        margin-right: 30px
+        color: $purple
+        &:last-child
+            margin-right: 0
+        .btn 
+            justify-content: center
+            border-width: 3px
+            font-size: 21px
+            font-weight: 700
+        &:nth-child(1)
+            color: $pink
+            .rate 
+                &-item 
+                    &__subtitle 
+                        color: $pink
+                &-box 
+                    border-color: $pink
+                &-grades 
+                    &__item 
+                        background: $pink
+            .btn 
+                border-color: $pink
+                background: $pink
+                &:hover 
+                    background: transparent
+                    color: $pink
+        &:nth-child(2)
+            color: $blue
+            .rate 
+                &-item 
+                    &__subtitle 
+                        color: $blue
+                &-box 
+                    border-color: $blue
+                &-grades 
+                    &__item 
+                        background: $blue
+            .btn 
+                border-color: $blue
+                background: $blue
+                &:hover 
+                    background: transparent
+                    color: $blue
+        &__title
+            text-align: center
+        &__box
+            margin-bottom: 20px
+        &__btn
+            width: 100%
+            margin-bottom: 10px
+            text-align: center
+        &__subtitle
+            color: $purple
+            text-align: center
+            font-size: 15px
+            font-weight: 500
+    &-box
+        @include flex($fd: column)
+        height: 100%
+        padding: 14px 38px 32px
+        border: 3px solid $purple
+        border-radius: $borderRadius  
+        &__info
+            text-align: center
+        &__title
+            margin-bottom: 5px
+            font-size: 15px
+            font-weight: 500
+        &__days
+            font-size: 21px
+            font-weight: 700
+        &__times
+            font-size: 15px
+            font-weight: 700
+        p 
+            margin: 0
+    &-grades
+        @include flex($ai: flex-end)
+        margin-top: 20px
+        &__item
+            @include flex($fd: column, $jc: flex-end, $ai: flex-start)
+            flex-basis: 33%
+            margin-right: 10px
+            padding: 11px
+            background: $purple
+            border-radius: $borderRadius
+            color: $white
+            font-weight: 700
+            &:last-child
+                margin-right: 0
+            &:nth-child(1)
+                min-height: 70px
+            &:nth-child(2)
+                min-height: 100px
+            &:nth-child(3)
+                min-height: 140px                
+        &__price
+            margin-bottom: 10px
+            font-size: 19px
+        &__description
+            font-size: 14px
+
+.plus
+    @include flex()
+    max-width: 800px
+    margin: 0 auto 160px
+    &__item
+        @include flex($ai: flex-start)
+        flex-basis: 50%
+        margin-right: 30px
+        font-weight: 500
+        svg 
+            flex-shrink: 0
+            height: 60px
+            margin-right: 30px
+            fill: $black
+        .svg
+            &__responsibility 
+                width: 51px
+            &__quality 
+                width: 60px
+
+.services 
+    margin-bottom: 100px
+    &__content 
+        @include flex($fw: wrap, $ai: initial)
+    &-item 
+        @include flex($fd:column, $ai: flex-start)
+        flex-basis: calc(33% - 22px)
+        margin: 0 22px 22px 0
+        padding: 43px 50px
+        border: 3px solid $purpleDark
+        border-radius: $borderRadius
+        color: $purpleDark
+        &__title
+            margin-bottom: 10px
+            font-size: 19px
+            font-weight: 700
+
+.steps
+    max-width: 930px
+    margin: auto
+    margin-bottom: 200px
+    &__content 
+    &-item
+        @include flex($jc: center)
+        margin-bottom: 60px
+        &__text
+            flex-basis: 40%
+        &__title
+            @include flex($jc: flex-start)
+            max-width: 380px
+            margin-bottom: 12px
+            font-weight: 700
+        &__number
+            @include flex($jc: center)
+            flex-shrink: 0
+            width: 35px
+            height: 35px
+            margin-right: 25px
+            background: $purple
+            border-radius: $borderRadius
+            color: $white
+            font-size: 21px
+        &__description
+            max-width: 300px
+            font-size: 14px
+            font-weight: 500
+        &__arrow
+            width: 28px
+            height: 34px
+            margin-top: 20px
+            background-image: url('/img/arrow-down.svg')
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center
+        &__image
+            flex-basis: 40%
+        &:nth-child(odd)
+            .steps-item
+                &__text 
+                    margin-left: auto  
+        &:nth-child(even)
+            flex-direction: row-reverse   
+            .steps-item
+                &__text 
+                    margin-right: auto
+                    margin-left: 60px
+        &:nth-child(4)
+            .steps-item
+                &__number 
+                    background: $pink
+            
+@media (max-width: 1280px) 
+    .calc
+        position: relative
+        margin-bottom: 70px
+        &__content 
+        &__title,
+        &__text
+            max-width: 50%
+        &__text
+            font-size: 10px
+        &__image
+            position: absolute
+            top: 0
+            right: 0
+            max-width: 50%
+            height: 80%
+            z-index: -1
+
+    .about
+        margin-bottom: 70px
+        font-size: 10px
+        &-item
+            margin-right: 10px
+            padding: 8px
+            
+    .rate 
+        margin-bottom: 35px
+        &__content 
+            flex-direction: column
+        &-item 
+            margin-bottom: 22px
+            margin-right: 0
+            .btn 
+                font-size: 18px
+
+    .plus 
+        margin-bottom: 60px
+        font-size: 12px
+        &__item 
+            align-items: center
+            svg 
+                margin-right: 20px
+
+    .services
+        &-item
+            flex-basis: calc(50% - 11px)
+            margin-right: 0
+
+    .steps 
+        margin-bottom: 110px
+    
+@media (max-width: 1280px) and (min-width: 768px)
+    .rate 
+        &-item 
+            position: relative
+            flex-direction: row-reverse
+            align-items: flex-end
+            padding: 32px 38px 32px 20px
+            border: 3px solid $purple
+            border-radius: $borderRadius
+            &__title 
+                position: absolute
+                top: 0
+                left: 50%
+                transform: translateX(-50%)
+            &__box 
+                flex-basis: 50%
+                margin: 0
+                padding: 0
+                border: none
+            &__bottom
+                @include flex($fd: column-reverse, $jc: flex-start, $ai: flex-start)
+                flex-basis: 50%
+                margin-right: 55px
+            &__btn 
+                margin: 0
+            &__subtitle
+                margin-bottom: 15px
+            &:nth-child(1)
+                border-color: $pink
+                .rate 
+                    &-grades 
+                        &__item 
+                            background: transparent
+                            border: 3px solid $pink
+                            color: $pink
+            &:nth-child(2)
+                border-color: $blue
+                .rate 
+                    &-grades 
+                        &__item 
+                            background: transparent
+                            border: 3px solid $blue
+                            color: $blue
+        &-box 
+            &__info 
+                margin-bottom: 10px
+                text-align: left
+                p
+                    margin: 0
+            &__days
+                font-size: 18px
+        &-grades 
+            margin-top: 0
+            &__item 
+                background: transparent
+                border: 3px solid $purple
+                color: $purple
+
+@media (max-width: 767px) 
+    .about
+        &__content
+            flex-wrap: wrap
+        &-item 
+            flex-basis: calc(50% - 5px)
+            margin: 0 0 10px 0
+            padding: 20px
+
+    .plus 
+        flex-wrap: wrap
+        &__item 
+            flex-basis: 100%
+            justify-content: flex-start
+            margin: 0 0 15px 0
+            .svg 
+                &__responsibility,
+                &__quality
+                    width: 30px
+                    height: 30px
+                    
+    .services
+        &-item
+            padding: 30px 20px
+
+    .steps
+        &-item
+            position: relative
+            &:nth-child(odd),
+            &:nth-child(even) 
+                flex-direction: column
+                .steps-item
+                    &__text
+                        margin: 0 auto 0 0
+                    &__image 
+                        margin: 0 0 0 auto
+            &__text
+                flex-basis: 100%
+            &__image
+                flex-basis: 60%
+                max-width: 70%
+            &__title,
+            &__description 
+                max-width: 100%
+            &__arrow 
+                position: absolute
+                top: 50%
+                left: 0
+
+    
+@media (max-width: 575px) 
+    .calc
+        margin-bottom: 35px
+        &__content 
+            padding-top: 80px
+        &__title 
+            max-width: 150px
+        &__text 
+            max-width: 100%
+            margin: 0 0 16px 0
+        &__image
+            max-width: 70%
+        .btn 
+            width: 100%
+            margin-bottom: 16px
+
+    .about 
+        margin-bottom: 35px
+        &-item 
+            padding: 10px
+
+    .rate
+        &-item
+            &__title
+                height: 70px
+            &__subtitle
+                font-size: 12px
+            .btn 
+                font-size: 16px
+        &-box
+            padding: 25px 30px
+            &__title
+                font-size: 12px
+            &__days
+                font-size: 16px
+
+        &-grades
+            &__price
+                font-size: 16px
+            &__description
+                font-size: 12px
+
+    .plus 
+        margin-bottom: 50px
+
+    .services
+        margin-bottom: 40px
+        &-item
+            flex-basis: calc(50% - 5px)
+            margin-bottom: 10px
+            padding: 20px
+            &__title
+                font-size: 10px
+            &__subtitle
+                font-size: 8px
+
+    .steps 
+        margin-bottom: 40px
+        .h2
+            max-width: 200px
+            margin-right: auto
+            margin-left: auto

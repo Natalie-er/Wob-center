@@ -1,0 +1,135 @@
+.footer 
+    padding: 50px 0
+    background: $black    
+    color: darken($white, 58%) //6b6b6b
+    font-size: 14px
+    font-weight: 600
+    a 
+        border: none
+        color: darken($white, 35%) //a6a6a6
+        &.anim-link 
+            &:after
+                right: 0
+                left: auto
+                width: 0
+                background: darken($white, 35%)
+            &:hover 
+                &:after 
+                    right: auto
+                    left: 0
+                    width: 100%
+                
+    .btn 
+        padding-left: 70px
+        padding-right: 70px
+        border-color: darken($white, 35%)
+        color: darken($white, 35%)
+        box-shadow: none
+        font-size: 16px
+        &:hover 
+            background: darken($white, 35%)
+            color: $black
+    .svg
+        &__logo
+            fill: darken($white, 35%)
+        &__social 
+            fill: darken($white, 35%)
+    &__top,
+    &__bottom
+        @include flex()
+    &__top 
+        margin-bottom: 30px
+    &__column 
+        &:nth-child(1)
+            flex-basis: 10%
+            flex-shrink: 0
+            margin-right: 60px
+        &:nth-child(2)
+            flex-basis: 80%
+        &:nth-child(3)
+            flex-basis: 10%
+            flex-shrink: 0
+            margin-left: 40px
+            text-align: center
+    &__copyright 
+        font-weight: 500
+    &__menu 
+        @include flex($jc: flex-start)
+        a 
+            &:not(:last-child)
+                margin-right: 35px
+    &__description 
+        max-width: 425px
+        margin-right: auto
+        font-size: 12px
+    &__social 
+        @include flex()
+        a 
+            &:hover 
+                transform: translateY(-5px)
+
+    
+@media (max-width: 1280px) 
+    .footer
+        font-size: 12px
+        &__column
+            &:nth-child(1)
+                flex-basis: 13%
+            &:nth-child(2) 
+                flex-basis: 70%
+            &:nth-child(3) 
+                flex-basis: 17%
+        &__menu 
+            justify-content: space-between
+        &__logo 
+            svg 
+                max-width: 85px
+        &__description 
+            font-size: 10px
+            
+
+@media (max-width: 767px) 
+    .footer 
+        .container
+            position: relative
+            @include flex($fd: column-reverse, $ai: flex-start)
+        &__top,
+        &__bottom
+            flex-direction: column
+            align-items: initial
+            flex-basis: 100%
+            width: 100%
+            margin: 0
+        &__copyright
+            order: 1
+            padding: 3px 0
+        &__menu 
+            flex-direction: column
+            align-items: flex-start
+            margin-bottom: 30px
+            a
+                &,
+                &.amin-link 
+                    display: block
+                    width: 100%
+                    margin: 0
+                    padding: 5px 0
+                    border-bottom: 1px solid darken($white, 58%)
+                    &:after
+                        display: none
+        &__phone 
+            position: absolute
+            top: 0.5em
+            right: 0
+            font-size: 18px
+            transform: translateY(-50%)
+        &__logo 
+            margin-bottom: 20px
+        &__description
+            margin-bottom: 20px
+        &__social 
+            position: absolute
+            bottom: 0
+            right: 0
+            a 
+                margin-right: 15px

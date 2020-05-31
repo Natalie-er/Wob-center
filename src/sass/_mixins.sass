@@ -1,0 +1,9 @@
+@mixin flex ($fd: row, $fw: nowrap, $jc: space-between, $ai: center)
+    display: flex
+    flex-direction: $fd
+    flex-wrap: $fw
+    justify-content: $jc
+    align-items: $ai
+
+@mixin shadow ($v1: 3px, $v2: 4px, $v3: 4px)
+    box-shadow: $v1 $v2 $v3 rgba(105, 74, 230, 0.21)
